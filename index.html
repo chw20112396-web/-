@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Tetris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 배경 장식 요소 -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="glass-panel">
+            <div class="game-header">
+                <h1>TETRIS</h1>
+                <div class="score-board">
+                    <p>SCORE</p>
+                    <h2 id="score">0</h2>
+                </div>
+            </div>
+
+            <div class="board-container">
+                <canvas id="game-board" width="300" height="600"></canvas>
+                
+                <!-- 게임 오버 오버레이 -->
+                <div id="game-over" class="overlay hidden">
+                    <h2>GAME OVER</h2>
+                    <p>최종 점수: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="glow-btn">다시 시작</button>
+                </div>
+
+                <!-- 시작 오버레이 -->
+                <div id="start-screen" class="overlay">
+                    <h2>READY?</h2>
+                    <p>방향키: 이동<br>위 화살표/스페이스: 회전</p>
+                    <button id="start-btn" class="glow-btn">게임 시작</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/tetris.js"></script>
+</body>
+</html>
